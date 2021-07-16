@@ -1,0 +1,88 @@
+.mentoring-about {
+    // .mentoring-about__container
+    &__container {}
+    // .mentoring-about__body
+    &__body {}
+    // .mentoring-about__title
+    &__title {}
+    // .mentoring-about__subtitle
+    &__subtitle {}
+    // .mentoring-about__content
+    &__content {}
+}
+.content-mentoring {
+}
+
+.people-mentoring {
+    // .people-mentoring__container
+    &__container {}
+    // .people-mentoring__body
+    &__body {
+        display: flex;
+        flex-direction: column;
+        margin: -20px 0px;
+    }
+    // .people-mentoring__title
+    &__title {
+        text-align: center;
+        padding: 20px 0px;
+        font-size: 160%;
+    }
+    // .people-mentoring__content
+    &__content {
+        padding: 20px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        @media (max-width: $md2+px) {
+            justify-content: center;
+        }
+    }
+}
+.content-mentoring {
+    margin: -15px;
+    // .content-mentoring__item
+    &__item {
+        flex: 0 1 25%;
+        padding: 15px;
+        min-width: 200px;
+        @media (max-width: $md2+px) {
+            flex: 0 1 50%;
+            .item-mentoring__image {
+                min-height: 400px;
+            }
+        }
+        @media (max-width: $md3+px) {
+            flex: 0 1 100%;
+        }
+    }
+}
+.item-mentoring {
+    display: flex;
+    flex-direction: column;
+    margin: -10px 0px;
+    // .item-mentoring__image
+    &__image {
+        min-width: 100%;
+        min-height: 300px;
+        padding: 10px 0px;
+        img {
+            object-position: 0% 0%;
+        }
+    }
+    // .item-mentoring__name
+    &__name {
+        padding: 10px 0px;
+        font-weight: 700;
+    }
+    // .item-mentoring__position
+    &__position {
+        padding: 10px 0px;
+        display: flex;
+        flex-direction: column;
+        margin: -5px 0px;
+        > p {
+            padding: 5px 0px;
+        }
+    }
+}
+

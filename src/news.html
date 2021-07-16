@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html-include/_head.html',{
+		"title":"Новости"
+	})
+	<body>
+        <div class="wrapper">
+            @@include('html-include/_subheader.html')
+			@@include('html-include/_header.html')
+			<main class="page">
+                @@include('html-include/_breadcrumb.html',{
+                    "prevElements": "@@loop('_breadcrumb-item.html', [{text: 'Главная', link: 'index.html'}])",
+                    "currElement": "Новости"
+                })
+                <section class="page__news-content news-content-news">
+                    <div class="news-content-news__container _container">
+                        <div class="news-content-news__body">
+                            <div class="news-content-news__main-block news-content-block">
+                                <div class="news-content-block__item item-content-news">
+                                    <span class="item-content-news__title">ОБЩЕСТВЕННАЯ ПРИЕМНАЯ И «ГОРЯЧАЯ ЛИНИЯ»</span>
+                                    <span class="item-content-news__date _icon-calendar">23 Июнь 2021</span>
+                                    <div class="item-content-news__image">
+                                        <a href="#">
+                                            <img src="img/news-content/01.jpg" alt="Image">
+                                        </a>
+                                    </div>
+                                    <div class="item-content-news__text text-item-news">
+                                        <p>Напоминаем, в Центре «Дело» работает Общественная приемная и «Горячая линия»</p>
+                                        <p>Наши специалисты ждут на консультации предпринимателей, самозанятых и тех, кто хочет открыть своё дело!</p>
+                                    </div>
+                                </div>
+                                <div class="news-content-block__item item-content-news">
+                                    <span class="item-content-news__title">17 ИЮНЯ СЕМИНАР-ПРАКТИКУМ «ИЗМЕНЕНИЯ ЗАКОНОДАТЕЛЬСТВА В ПРЕДПРИНИМАТЕЛЬСТВЕ»</span>
+                                    <span class="item-content-news__date _icon-calendar">22 Июнь 2021</span>
+                                    <div class="item-content-news__image">
+                                        <a href="#">
+                                            <img src="img/news-content/02.jpg" alt="Image">
+                                        </a>
+                                    </div>
+                                    <div class="item-content-news__text text-item-news">
+                                        <p>17 июня 2021 г. в рамках социального  проекта «Мое дело» Формирование региональной системы защиты и поддержки субъектов малого предпринимательства, самозанятого населения Волгоградской области Центр «Дело» провел семинар - практикум для предпринимателей и самозанятых, на который были приглашены представители ИФНС России по Дзержинскому  району г. Волгограда.</p>
+                                    </div>
+                                </div>
+                                <div class="news-content-block__item item-content-news">
+                                    <span class="item-content-news__title">17 ИЮНЯ 2021 г. СЕМИНАР-ПРАКТИКУМ «ИЗМЕНЕНИЯ ЗАКОНОДАТЕЛЬСТВА В ПРЕДПРИНИМАТЕЛЬСТВЕ»</span>
+                                    <span class="item-content-news__date _icon-calendar">15 Июнь 2021</span>
+                                    <div class="item-content-news__image">
+                                        <a href="#">
+                                            <img src="img/news-content/03.jpg" alt="Image">
+                                        </a>
+                                    </div>
+                                    <div class="item-content-news__text text-item-news">
+                                        <p>Приглашаем предпринимателей и бухгалтеров принять участие в  семинаре - практикуме по изменениям законодательства в предпринимательстве в 2021 г.</p>
+                                        <p>На семинаре рассматриваются изменения действующего законодательства в области предпринимательской деятельности и новый порядок применения онлайн-касс с 1 июля   2021 г.</p>
+                                    </div>
+                                </div>
+                                <div class="news-content-block__item item-content-news">
+                                    <span class="item-content-news__title">9 ИЮНЯ 2021 г. ДЕНЬ ПРАВОВОЙ И ФИНАНСОВОЙ ГРАМОТНОСТИ ДЛЯ НАЧИНАЮЩИХ ПРЕДПРИНИМАТЕЛЕЙ</span>
+                                    <span class="item-content-news__date _icon-calendar">07 Июнь 2021</span>
+                                    <div class="item-content-news__image">
+                                        <a href="#">
+                                            <img src="img/news-content/04.jpg" alt="Image">
+                                        </a>
+                                    </div>
+                                    <div class="item-content-news__text text-item-news">
+                                        <p>Приглашаем  начинающих предпринимателей, самозанятых граждан и тех, кто хочет открыть собственное дело на день правовой и финансовой грамотности.</p>
+                                        <p>На мероприятии рассматриваются правовые и финансовые основы организации и ведения собственного дела, как выбрать бизнес-модель и оценить ее жизнеспособность, как вести учет доходов и расходов, что делать после регистрации, как грамотно вести свой бизнес – эти и другие вопросы рассмотрим 9 июня в 10:00.</p>
+                                    </div>
+                                </div>
+                                <div class="news-content-block__item item-content-news">
+                                    <span class="item-content-news__title">3 ИЮНЯ 2021 г. ДЕНЬ ПРАВОВОЙ И ФИНАНСОВОЙ ГРАМОТНОСТИ ДЛЯ НАЧИНАЮЩИХ ПРЕДПРИНИМАТЕЛЕЙ</span>
+                                    <span class="item-content-news__date _icon-calendar">31 Май 2021</span>
+                                    <div class="item-content-news__image">
+                                        <a href="#">
+                                            <img src="img/news-content/05.jpg" alt="Image">
+                                        </a>
+                                    </div>
+                                    <div class="item-content-news__text text-item-news">
+                                        <p>Приглашаем  начинающих предпринимателей, самозанятых граждан и тех, кто хочет открыть собственное дело на день правовой и финансовой грамотности.</p>
+                                        <p>На мероприятии рассматриваются правовые и финансовые основы организации и ведения собственного дела, как выбрать бизнес-модель и оценить ее жизнеспособность, как вести учет доходов и расходов, что делать после регистрации, как грамотно вести свой бизнес – эти и другие вопросы рассмотрим 3 июня в 10:00.</p>
+                                    </div>
+                                </div>
+                                <ul class="news-content-block__more more-news">
+                                    <li class="more-news__item">
+                                        <a class="more-news__link" href="#">ДЕНЬ НАСТАВНИЧЕСТВА – КУРС НА УСПЕХ</a>
+                                    </li>
+                                    <li class="more-news__item">
+                                        <a class="more-news__link" href="#">О РЕСУРСАХ ДЛЯ РАЗВИТИЯ БИЗНЕСА НА БИЗНЕС-ЗАВТРАКЕ!</a>
+                                    </li>
+                                    <li class="more-news__item">
+                                        <a class="more-news__link" href="#">С  23 по 30 апреля 2021 года  в муниципальных образованиях Волгоградской области торжественно открыты  Центры правовой и финансовой грамотности «Мое дело»</a>
+                                    </li>
+                                    <li class="more-news__item">
+                                        <a class="more-news__link" href="#">29 АПРЕЛЯ 2021 г. ДЕНЬ ПРАВОВОЙ И ФИНАНСОВОЙ ГРАМОТНОСТИ ДЛЯ НАЧИНАЮЩИХ ПРЕДПРИНИМАТЕЛЕЙ</a>
+                                    </li>
+                                </ul>
+                                <div class="news-content-block__pagination">
+                                    <ul id="pagination-demo" class="pagination-sm"></ul>
+                                </div>
+                            </div>
+                            <div class="news-content-news__main-side _side-wrapper">
+                                <div class="news-content-news__side-block side-news _side-block _scr-item">
+                                    <div class="side-news__last last-news">
+                                        <span class="last-news__title">Последние новости</span>
+                                        <ul class="last-news__list">
+                                            <li class="last-news__item item-last-news">
+                                                <span class="item-last-news__date _icon-calendar">23.06.21</span>
+                                                <a class="item-last-news__text" href="#">ОБЩЕСТВЕННАЯ ПРИЕМНАЯ И «ГОРЯЧАЯ ЛИНИЯ»</a>
+                                            </li>
+                                            <li class="last-news__item item-last-news">
+                                                <span class="item-last-news__date _icon-calendar">22.06.21</span>
+                                                <a class="item-last-news__text" href="#">17 ИЮНЯ СЕМИНАР-ПРАКТИКУМ «ИЗМЕНЕНИЯ ЗАКОНОДАТЕЛЬСТВА В ПРЕДПРИНИМАТЕЛЬСТВЕ»</a>
+                                            </li>
+                                            <li class="last-news__item item-last-news">
+                                                <span class="item-last-news__date _icon-calendar">15.06.21</span>
+                                                <a class="item-last-news__text" href="#">17 ИЮНЯ 2021 г. СЕМИНАР-ПРАКТИКУМ «ИЗМЕНЕНИЯ ЗАКОНОДАТЕЛЬСТВА В ПРЕДПРИНИМАТЕЛЬСТВЕ»</a>
+                                            </li>
+                                            <li class="last-news__item item-last-news">
+                                                <span class="item-last-news__date _icon-calendar">07.06.21</span>
+                                                <a class="item-last-news__text" href="#">9 ИЮНЯ 2021 г. ДЕНЬ ПРАВОВОЙ И ФИНАНСОВОЙ ГРАМОТНОСТИ ДЛЯ НАЧИНАЮЩИХ ПРЕДПРИНИМАТЕЛЕЙ</a>
+                                            </li>
+                                            <li class="last-news__item item-last-news">
+                                                <span class="item-last-news__date _icon-calendar">31.05.21</span>
+                                                <a class="item-last-news__text" href="#">3 ИЮНЯ 2021 г. ДЕНЬ ПРАВОВОЙ И ФИНАНСОВОЙ ГРАМОТНОСТИ ДЛЯ НАЧИНАЮЩИХ ПРЕДПРИНИМАТЕЛЕЙ</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="side-news__archive archive-news">
+                                        <div class="archive-news__title">Архив новостей</div>
+                                        <ul class="archive-news__list">
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Апрель, 2016</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Март, 2016</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Февраль, 2016</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Январь, 2016</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Ноябрь, 2015</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Октябрь, 2015</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Сентябрь, 2015</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Август, 2015</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Июль, 2015</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Июнь, 2015</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Май, 2015</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Апрель, 2015</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Март, 2015</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Февраль, 2015</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Январь, 2015</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Декабрь, 2014</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Ноябрь, 2014</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Сентябрь, 2014</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Август, 2014</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Июль, 2014</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Июнь, 2014</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Май, 2014</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Апрель, 2014</a>
+                                            </li>
+                                            <li class="archive-news__item">
+                                                <a class="archive-news__link" href="#" >Март, 2014</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('html-include/_icons.html')
+            </main>
+            @@include('html-include/_footer.html')
+        </div>
+        @@include('html-include/_js.html')
+    </body>
+</html>

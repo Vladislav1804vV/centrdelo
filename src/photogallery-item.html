@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html-include/_head.html',{
+		"title":"Фотогалерея"
+	})
+	<body>
+        <div class="wrapper">
+            @@include('html-include/_subheader.html')
+			@@include('html-include/_header.html')
+			<main class="page">
+                @@include('html-include/_breadcrumb.html',{
+                    "prevElements": "@@loop('_breadcrumb-item.html', [{text: 'Главная', link: 'index.html'},{text: 'О центре', link: 'about.html'},{text: 'Фотогалерея', link: 'photogallery.html'}])",
+                    "currElement": "26 ноября 2020 г. Онлайн -консультации предпринимателей Старополтавского муниципального района «Изменения законодательства в бизнесе с 2021 г.»"
+                })
+                <section class="page__gallery-item gallery-item-photogallery">
+                   <div class="gallery-item-photogallery__container _container">
+                       <div class="gallery-item-photogallery__body">
+                           <span class="gallery-item-photogallery__title _title-info">26 ноября 2020 г. Онлайн -консультации предпринимателей Старополтавского муниципального района «Изменения законодательства в бизнесе с 2021 г.»</span>
+                            <div class="gallery-item-photogallery__photos _gallery">
+                                <a class="gallery-item-photogallery__item _scr-item" href="img/photogallery/01.jpg">
+                                    <img src="img/photogallery/01.jpg" alt="Image">
+                                </a>
+                                <a class="gallery-item-photogallery__item _scr-item" href="img/photogallery/02.jpg">
+                                    <img src="img/photogallery/02.jpg" alt="Image">
+                                </a>
+                                <a class="gallery-item-photogallery__item _scr-item" href="img/photogallery/03.jpg">
+                                    <img src="img/photogallery/03.jpg" alt="Image">
+                                </a>
+                                <a class="gallery-item-photogallery__item _scr-item" href="img/photogallery/04.jpg">
+                                    <img src="img/photogallery/04.jpg" alt="Image">
+                                </a>
+                                <a class="gallery-item-photogallery__item _scr-item" href="img/photogallery/05.jpg">
+                                    <img src="img/photogallery/05.jpg" alt="Image">
+                                </a>
+                                <a class="gallery-item-photogallery__item _scr-item" href="img/photogallery/06.jpg">
+                                    <img src="img/photogallery/06.jpg" alt="Image">
+                                </a>
+                                <a class="gallery-item-photogallery__item _scr-item" href="img/photogallery/07.jpg">
+                                    <img src="img/photogallery/07.jpg" alt="Image">
+                                </a>
+                                <a class="gallery-item-photogallery__item _scr-item" href="img/photogallery/08.jpg">
+                                    <img src="img/photogallery/08.jpg" alt="Image">
+                                </a>
+                                <a class="gallery-item-photogallery__item _scr-item" href="img/photogallery/01.jpg">
+                                    <img src="img/photogallery/01.jpg" alt="Image">
+                                </a>
+                                <a class="gallery-item-photogallery__item _scr-item" href="img/photogallery/02.jpg">
+                                    <img src="img/photogallery/02.jpg" alt="Image">
+                                </a>
+                                <a class="gallery-item-photogallery__item _scr-item" href="img/photogallery/03.jpg">
+                                    <img src="img/photogallery/03.jpg" alt="Image">
+                                </a>
+                                <a class="gallery-item-photogallery__item _scr-item" href="img/photogallery/04.jpg">
+                                    <img src="img/photogallery/04.jpg" alt="Image">
+                                </a>
+                                <a class="gallery-item-photogallery__item _scr-item" href="img/photogallery/05.jpg">
+                                    <img src="img/photogallery/05.jpg" alt="Image">
+                                </a>
+                                <a class="gallery-item-photogallery__item _scr-item" href="img/photogallery/06.jpg">
+                                    <img src="img/photogallery/06.jpg" alt="Image">
+                                </a>
+                                <a class="gallery-item-photogallery__item _scr-item" href="img/photogallery/07.jpg">
+                                    <img src="img/photogallery/07.jpg" alt="Image">
+                                </a>
+                                <a class="gallery-item-photogallery__item _scr-item" href="img/photogallery/08.jpg">
+                                    <img src="img/photogallery/08.jpg" alt="Image">
+                                </a>
+                            </div>
+                       </div>
+                   </div>
+                </section>
+                @@include('html-include/_icons.html')
+            </main>
+            @@include('html-include/_footer.html')
+        </div>
+        @@include('html-include/_js.html')
+    </body>
+</html>

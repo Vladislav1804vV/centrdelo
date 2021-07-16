@@ -1,0 +1,105 @@
+@font-face {
+	font-family: "icons";
+	font-display: swap;
+	src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2#icons") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="_icon-"],
+[class*=" _icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-arrow-down:before {
+	content: "\e900";
+  }
+  ._icon-arrow-link:before {
+	content: "\e901";
+  }
+  ._icon-cart:before {
+	content: "\e902";
+  }
+  ._icon-favorite:before {
+	content: "\e903";
+  }
+  ._icon-location:before {
+	content: "\e904";
+  }
+  ._icon-phone:before {
+	content: "\e905";
+  }
+  ._icon-search:before {
+	content: "\e906";
+  }
+  ._icon-send:before {
+	content: "\e907";
+  }
+  ._icon-share:before {
+	content: "\e908";
+  }
+  ._icon-facebook:before {
+	content: "\e909";
+  }
+  ._icon-vk:before {
+	content: "\e90a";
+  }
+  ._icon-instagram:before {
+	content: "\e90b";
+  }
+  ._icon-arrow-in-circle:before {
+	content: "\e90c";
+  }
+  ._icon-bow:before {
+	content: "\e90d";
+  }
+  ._icon-group:before {
+	content: "\e90e";
+  }
+  ._icon-call:before {
+	content: "\e90f";
+  }
+  ._icon-calendar:before {
+	content: "\e910";
+  }
+  ._icon-clock:before {
+	content: "\e911";
+  }
+  ._icon-envelope:before {
+	content: "\e912";
+  }
+  ._icon-house:before {
+	content: "\e913";
+  }
+  ._icon-about:before {
+	content: "\e914";
+  }
+  ._icon-newspaper:before {
+	content: "\e915";
+  }
+  ._icon-mentoring:before {
+	content: "\e916";
+  }
+  ._icon-support:before {
+	content: "\e917";
+  }
+  ._icon-contacts:before {
+	content: "\e918";
+  }
+  ._icon-close:before {
+	content: "\e919";
+  }

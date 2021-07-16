@@ -1,0 +1,192 @@
+@use "sass:list";
+@use "sass:map";
+@use "sass:string";
+@use "sass:math";
+
+//Подключение шрифта
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+//Адаптивный шрифт
+@mixin adaptiv-font($pcSize, $mobSize, $maxSize: 1, $unit: px) {
+	$addSize: $pcSize - $mobSize;
+	@if $maxSize==1 {
+		//Только если меньше контейнера
+		font-size: $pcSize + unit;
+		@media (max-width: #{$maxWidthContainer + px}) {
+			font-size: calc(#{$mobSize + unit} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+		}
+	} @else if $maxSize==2 {
+		//Только если больше контейнера
+		font-size: $pcSize + unit;
+		@media (min-width: #{$maxWidthContainer + px}) {
+			font-size: calc(#{$mobSize + unit} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	} @else {
+		//Всегда
+		font-size: calc(#{$mobSize + unit} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}
+
+//Адаптивное свойство
+@mixin adaptive-value($indentType, $pcSize, $mobSize, $maxSize: 1, $unit: px) {
+	$addSize: $pcSize - $mobSize;
+	@if $maxSize==1 {
+		//Только если меньше контейнера
+		#{$indentType}: $pcSize + $unit;
+		@media (max-width: #{$maxWidthContainer + px}) {
+			#{$indentType}: calc(#{$mobSize + $unit} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+		}
+	} @else if $maxSize==2 {
+		//Только если больше контейнера
+		#{$indentType}: $pcSize + $unit;
+		@media (min-width: #{$maxWidthContainer + px}) {
+			#{$indentType}: calc(#{$mobSize + $unit} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	} @else if $maxSize==3 {
+		//Всегда
+		#{$indentType}: calc(#{$mobSize + $unit} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}
+
+@mixin gridIE_X($count, $width, $gap: 0) {
+	$listIE: ();
+	$list: ();
+	@for $i from 1 through $count {
+		$listIE: list.append($listIE, $width + ' ' + $gap);
+		$list: list.append($list, $width);
+	};
+	-ms-grid-columns: #{$listIE};
+	grid-template-columns: #{$list};
+}
+
+@mixin gridIE_Y($count, $height, $gap: 0) {
+	$listIE: ();
+	$list: ();
+	@for $i from 1 through $count {
+		$listIE: list.append($listIE, $height + ' ' + $gap);
+		$list: list.append($list, $height);
+	};
+	-ms-grid-rows: #{$listIE};
+	grid-template-rows: #{$list};
+}	
+
+@mixin gridLocationIE($x, $y, $spanOffset: false) {
+	$count: 0;
+	@for $y from 1 through $y {
+		@for $x from 1 through $x {
+			$count: $count + 1;
+			&>:nth-child(#{$count}) {
+				-ms-grid-column: 2 * $x - 1;
+				-ms-grid-row: 2 * $y - 1;
+			}
+		}
+	}
+}
+
+@mixin foo($count, $width, $spanOffset) {
+	$seq: '';
+	@for $s from 1 through $count {
+		$seq: $seq + $s;
+		$spanX: map.get($spanOffset, $s, spanX);
+		@if $spanX and $spanX > 1 {
+			@for $ch from 1 to map.get($spanOffset, $s, spanX) {
+				$seq: $seq + $s;
+			}
+		}
+	}
+	@for $s from 1 through $count {
+		$spanY: map.get($spanOffset, $s, spanY);
+		@if $spanY and $spanY > 1 {
+			$i: string.index($seq, #{$s});
+			$spanX: map.get($spanOffset, $s, spanX);
+			@if not $spanX {
+				$spanX: 1;
+			}
+			@for $var from 1 to $spanY {
+				@for $ch from 1 through $spanX {
+					$insert: $i + $width * $var;
+					$length: string.length($seq);
+					$offset: 0;
+					@if $insert > $length + 1 {
+						@for $any from 1 through $insert - $length - 1 {
+							$seq: string.insert($seq, '0', $length + 1 + $offset);
+							$offset: $offset + 1;
+							
+						}
+					}
+					$seq: string.insert($seq, #{$s}, $i + $width * $var + $offset);
+				}
+			}
+		}
+	}
+	$iter: math.ceil(math.div(string.length($seq), $width));
+	$offset: 0;
+	$array: ();
+	@for $part from 1 through $iter {
+		$array: map.set($array, $part, string.slice($seq, $offset + 1, $offset + $width));
+		$offset: $offset + $width;
+	}
+	@each $row in $array {
+		@debug $row;
+	}
+	$span: ();
+	@for $c from 1 to $count {
+		$column-span: 0;
+		$row-span: 0;
+		$a: 0;
+		@each $r in $array {
+			@debug list.index($r, $c);
+			@if list.index($r, $c) {
+				
+				@for $col from 1 through $width {
+					@if list.nth($r, $col) == $c {
+						$column-span: list.append($column-span, $column-span + 1);
+					}
+					
+				}
+				$row-span: $row-span + 1;
+			}
+		}
+		$span: map.set($span, $c, (column: $column-span, row: $row-span));
+		@debug $span;
+	}
+	@for $c from 1 through $count {
+		&>:nth-child(#{$c}) {
+			-ms-grid-column: map.get($span, $c, column);
+			-ms-grid-row: map.get($span, $c, row);
+			-ms-grid-column-span: map.get($span, $c, column);
+			-ms-grid-row-span: map.get($span, $c, row);
+			// $grid-column: 1;
+			// $grid-row: 1;
+			// $grid-column-span: 1;
+			// $grid-row-span: 1;
+			// $insert: 0;
+			// $i: 1;
+			// @each $row in $array {
+			// 	$insert: string.index(#{$row}, #{$c});
+			// 	@if $insert {
+			// 		$grid-column: $insert;
+			// 		-ms-grid-column: #{$grid-column};
+			// 		$grid-column: $insert - 1;
+			// 		$slice: string.slice(#{$row}, $insert, $insert);
+			// 		@while $slice == #{$c} {
+			// 			$grid-column: $grid-column + 1;
+			// 			$insert: $insert + 1;
+			// 			$slice: string.slice(#{$row}, $insert, $insert);
+			// 		}
+			// 		-ms-grid-column-span: #{$insert - $grid-column + 1};
+			// 	}
+			// 	$i: $i + 1;
+			// }
+		}
+	}
+	@debug $array;
+}

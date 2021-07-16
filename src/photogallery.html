@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html-include/_head.html',{
+		"title":"Фотогалерея"
+	})
+	<body>
+        <div class="wrapper">
+            @@include('html-include/_subheader.html')
+			@@include('html-include/_header.html')
+			<main class="page">
+                @@include('html-include/_breadcrumb.html',{
+                    "prevElements": "@@loop('_breadcrumb-item.html', [{text: 'Главная', link: 'index.html'},{text: 'О центре', link: 'about.html'}])",
+                    "currElement": "Фотогалерея"
+                })
+                <section class="page__gallery gallery-photogallery">
+                    <div class="gallery-photogallery__container _container">
+                        <div class="gallery-photogallery__body">
+                            <span class="gallery-photogallery__title">Фотогалерея</span>
+                            <div class="gallery-photogallery__photos photos-gallery">
+                                <div class="photos-gallery__item item-gallery">
+                                    <a class="item-gallery__link item-gallery" href="photogallery-item.html">
+                                        <div class="item-gallery__image _ibg">
+                                            <img src="img/photogallery/01.jpg" alt="Photo">
+                                        </div>
+                                        <span class="item-gallery__text">Какой-нибудь тексть текст</span>
+                                    </a>
+                                </div>
+                                <div class="photos-gallery__item item-gallery">
+                                    <a class="item-gallery__link item-gallery" href="photogallery-item.html">
+                                        <div class="item-gallery__image _ibg">
+                                            <img src="img/photogallery/02.jpg" alt="Photo">
+                                        </div>
+                                        <span class="item-gallery__text">Какой-нибудь тексть текст</span>
+                                    </a>
+                                </div>
+                                <div class="photos-gallery__item item-gallery">
+                                    <a class="item-gallery__link item-gallery" href="photogallery-item.html">
+                                        <div class="item-gallery__image _ibg">
+                                            <img src="img/photogallery/03.jpg" alt="Photo">
+                                        </div>
+                                        <span class="item-gallery__text">Какой-нибудь тексть текст</span>
+                                    </a>
+                                </div>
+                                <div class="photos-gallery__item item-gallery">
+                                    <a class="item-gallery__link item-gallery" href="photogallery-item.html">
+                                        <div class="item-gallery__image _ibg">
+                                            <img src="img/photogallery/04.jpg" alt="Photo">
+                                        </div>
+                                        <span class="item-gallery__text">Какой-нибудь тексть текст</span>
+                                    </a>
+                                </div>
+                                <div class="photos-gallery__item item-gallery">
+                                    <a class="item-gallery__link item-gallery" href="photogallery-item.html">
+                                        <div class="item-gallery__image _ibg">
+                                            <img src="img/photogallery/05.jpg" alt="Photo">
+                                        </div>
+                                        <span class="item-gallery__text">Какой-нибудь тексть текст</span>
+                                    </a>
+                                </div>
+                                <div class="photos-gallery__item item-gallery">
+                                    <a class="item-gallery__link item-gallery" href="photogallery-item.html">
+                                        <div class="item-gallery__image _ibg">
+                                            <img src="img/photogallery/06.jpg" alt="Photo">
+                                        </div>
+                                        <span class="item-gallery__text">Какой-нибудь тексть текст</span>
+                                    </a>
+                                </div>
+                                <div class="photos-gallery__item item-gallery">
+                                    <a class="item-gallery__link item-gallery" href="photogallery-item.html">
+                                        <div class="item-gallery__image _ibg">
+                                            <img src="img/photogallery/07.jpg" alt="Photo">
+                                        </div>
+                                        <span class="item-gallery__text">Какой-нибудь тексть текст</span>
+                                    </a>
+                                </div>
+                                <div class="photos-gallery__item item-gallery">
+                                    <a class="item-gallery__link item-gallery" href="photogallery-item.html">
+                                        <div class="item-gallery__image _ibg">
+                                            <img src="img/photogallery/08.jpg" alt="Photo">
+                                        </div>
+                                        <span class="item-gallery__text">Какой-нибудь тексть текст</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="gallery-photogallery__pagination">
+                                <ul id="pagination-demo" class="pagination-sm"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('html-include/_icons.html')
+            </main>
+            @@include('html-include/_footer.html')
+        </div>
+        @@include('html-include/_js.html')
+    </body>
+</html>
